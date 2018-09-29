@@ -1,0 +1,12 @@
+---
+layout: post
+title: UnityShader景深虚化效果
+date: 2018-09-29 22:02:20 +0300
+description:  UnityShader景深虚化效果 # Add post description (optional)
+img: worksImages/景深虚化.png # Add image post (optional)
+tags: [shader，Unity，C#]
+---
+## 简述：
+模糊效果是屏幕后处理的高斯模糊。而这个景深效果的原理是获取高斯模糊处理后的Texture A，与原图像Source Texture B。然后获取相机的深度图_CameraDepthTexture，得到具体的深度，然后与设置的固定距离相比较，决定显示的A或B，为避免两图的交界线过于明显，采用lerp插值的方式来过度，这里的图图像设置了远近两个距离，模拟相机的景深效果。小熊是用了以前做的卡通贴图，感觉效果还是不错的O(∩_∩)O。
+---
+img: worksImages/景深虚化.png # Add image post (optional)---
